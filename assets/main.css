@@ -1,0 +1,44 @@
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.logo {
+    max-width: 15em;
+}
+
+.orgname {
+    font-size: 64px;
+    font-family: "futura-pt", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0.1em 0;
+}
+
+.tagline {
+    color: #444
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: large;
+    margin: 1.5em 0;
+}
+
+.btn {
+    padding: 0.5em 1em;
+    border: 3px solid #444;
+    border-radius: 0.66em;
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+}
