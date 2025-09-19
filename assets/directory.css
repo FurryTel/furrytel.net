@@ -5,7 +5,7 @@
 .page {
     top: 0;
     width: 100%;
-    max-width: 600px;
+    max-width: 7in;
     height: 100%;
     margin: auto;
     display: flex;
@@ -82,7 +82,7 @@ td {
 }
 
 table.alternate tr:nth-child(even) td {
-    background-color: #DDD;
+    background-color: #DCDCDC;
 }
 
 .number {
@@ -99,6 +99,6 @@ table.alternate tr:nth-child(even) td {
 
 @media print {
     html {
-        font-size: medium;
+        font-size: small;
     }
 }

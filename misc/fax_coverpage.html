@@ -17,6 +17,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://use.typekit.net/vqq2hqe.css">
     <link rel="stylesheet" href="https://use.typekit.net/vqq2hqe.css">
     <link rel='stylesheet' type='text/css' media='all' href='./fax_service.css'>
+    <style>
+        .fields {
+            display: flex;
+            justify-content: space-between;
+            gap: 1em;
+            margin-bottom: 2em;
+        }
+
+        .field {
+            display: flex;
+            flex-grow: 1;
+        }
+
+        .field-name {
+            display: inline;
+            margin-right: 0.75em;
+        }
+
+        .field-area {
+            /* padding: 2px; */
+            border-bottom: 1px solid black;
+            width: 100%
+        }
+
+        .break {
+            width: 100%;
+            border-bottom: 2px dashed gray;
+            margin: 2em 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,19 +58,25 @@
                 <h3 class="pagename">Facsimile Service</h3>
             </div>
         </div>
-        <p>
-            <br>
-            Dear Engaged Reader, 
-        </p>
-        <p>
-            FurryTel is excited to introduce our Facsimile Service! To utilize this service, simply insert a document into your facsimile transceiver machine, then dial <span class="number">425-329-6262</span>. Your document will be reproduced at FurryTel's Demonstration Zone.
-        </p>
-        <p>
-            If you are unable to transmit your document via the Facsimile Service, please contact FurryTel Customer Assistance and request an RFC 1149 Compliant Avian Carrier. Please note that documents transmitted via Avian Carrier may incur additional charges.
-        </p>
-        <p>
-            Thank you for choosing FurryTel!
-        </p>
+        <div class="break"></div>
+        <div class="fields">
+            <div class="field">
+                <span class="field-name">To:</span>
+                <div class="field-area">&nbsp;</div>
+            </div>
+            <div class="field">
+                <span class="field-name">From:</span>
+                <div class="field-area">&nbsp;</div>
+            </div>
+        </div>
+        <div class="fields">
+            <div class="field">
+                <span class="field-name">Subject:</span>
+                <div class="field-area">&nbsp;</div>
+            </div>
+        </div>
+        <div class="break" style="margin-top: 0.75em; margin-bottom: 0.75em;"></div>
+        <div>Message:</div>
     </div>
 </body>
 
