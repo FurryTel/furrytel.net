@@ -96,3 +96,9 @@ table.alternate tr:nth-child(even) td {
     text-decoration: none;
     color: black;
 }
+
+@media print {
+    html {
+        font-size: medium;
+    }
+}
