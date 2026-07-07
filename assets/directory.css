@@ -97,6 +97,12 @@ table.alternate tr:nth-child(even) td {
     color: black;
 }
 
+.footnote {
+    font-size: smaller;
+    margin-top: 1em;
+    color: #444;
+}
+
 @media print {
     html {
         font-size: small;
