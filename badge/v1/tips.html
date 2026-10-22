@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <title>FurryTel</title>
+    <meta content="FurryTel" property="og:title" />
+    <meta content="Connecting creatures across the world!" property="og:description" />
+    <meta content="http://furrytel.net" property="og:url" />
+    <meta content="http://furrytel.net/assets/ftlogo.png" property="og:image" />
+    <meta content="#444444" data-react-helmet="true" name="theme-color" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/vqq2hqe.css">
+    <link rel="stylesheet" href="https://use.typekit.net/vqq2hqe.css">
+    <link rel='stylesheet' type='text/css' media='all' href='/assets/sublevel.css'>
+</head>
+
+<body>
+    <div class="page">
+        <div class="title">
+            <img src="/assets/ftlogo_mono.png" class="logo" height="80">
+            <div class="titlestack">
+                <h1 class="orgname">FurryTel</h1>
+                <h3 class="pagename">Badge Rev. 1</h3>
+            </div>
+        </div>
+        <br>
+        <h3>Notes from Matt:</h3>
+        <p>If you haven't soldered before, I'd recommend soldering:</p>
+        <ol>
+            <li>The five pushbuttons</li>
+            <li>Most other components</li>
+            <li>The Pi Pico</li>
+            <li>The display</li>
+            <li>The battery holder last (mostly just because it's physically big and also easy to get to its two solder joints)</li>
+        </ol>
+        <p>
+            ⚠️ The display is very melty, once you put that on be very careful what you touch with the soldering iron. 
+            also make sure you push the display all the way in. There are plastic mounting pegs on the corners, 
+            that line up with holes in the PCB; it should push all the way in flat against the PCB.
+        </p>
+        <p>
+            For the LEDs, the flat spot is the easiest way to line them up. For the electrolytics, the white half matches the (-) stripe.
+        </p>
+        <p>
+            For the on/off switch ... bend the outermost metal tabs a smidge with some pliers to hold it in there ... 
+            otherwise you will be tempted to hold the switch in place using your finger and you will burn yourself, ask me how I know 😁 
+        </p>
+        <p>
+            For the Pi Pico, do exactly one pin first so that you can easily re-melt the solder and get the rest of it aligned.  
+            then go to town on the rest of the pins.  
+            I'd recommend touching the soldering iron to the top of the Pico, perhaps using the hole to help you, 
+            and touching the solder to the corner between the Pi Pico and the badge PCB ... 
+            make sure the solder forms a nice fillet touching both the castellated edge and the main PCB. 
+            bad joints on the pico were our number one failure mode in testing and it's practically impossible to get a soldering iron in
+            there after you put the display on.  but oddly enough, not many failures there during the demo session... 
+        </p>
+</body>
+
+</html>
