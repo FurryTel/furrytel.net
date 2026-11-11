@@ -1,0 +1,77 @@
+@import url('/assets/sublevel.css');
+
+div.page {
+    max-width: calc(11in - 0.2in);
+    width: 100%;
+}
+
+a.title {
+    color: inherit;
+    text-decoration: none;
+}
+
+.intro {
+    margin-top: 1.5em;
+}
+
+.event-nav {
+    line-height: 2;
+}
+
+.event-nav a {
+    color: inherit;
+}
+
+.event-nav .sep {
+    color: #888;
+    margin: 0 0.2em;
+}
+
+section h2 {
+    border-bottom: 2px solid #444;
+    padding-bottom: 0.2em;
+}
+
+/* Masonry columns; each photo keeps its own aspect ratio */
+.gallery {
+    columns: 2;
+    column-gap: 1em;
+}
+
+/* break-inside keeps each photo whole instead of splitting across columns */
+.gallery_item {
+    display: block;
+    margin: 0 0 1em;
+    break-inside: avoid;
+}
+
+.gallery_item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.gallery_item figcaption {
+    padding-top: 0.3em;
+    font-size: 0.9em;
+}
+
+.gallery_item figcaption a {
+    color: inherit;
+}
+
+.credit {
+    display: block;
+    font-size: 0.85em;
+    color: #666;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 640px) {
+    .gallery {
+        columns: 1;
+    }
+}
