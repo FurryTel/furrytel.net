@@ -1,0 +1,22 @@
+:root {
+    color-scheme: light dark;
+    --bg-color: #fff;
+    --text-color: #000;
+    --text-color-dim: #444;
+    --btn-bg-color: #444;
+    --btn-text-color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #000;
+        --text-color: #fff;
+        --text-color-dim: #ccc;
+        --btn-bg-color: #ccc;
+        --btn-text-color: #000;
+    }
+
+    .logo {
+        filter: invert(1);
+    }
+}
