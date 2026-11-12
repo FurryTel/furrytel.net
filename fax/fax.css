@@ -1,0 +1,407 @@
+* {
+    box-sizing: border-box;
+}  
+
+.page {
+    top: 0;
+    min-width: calc(8.5in - 0.1in);
+    width: 100%;
+    max-width: calc(8.5in - 0.1in);
+    height: 100vh;
+    min-height: calc(11in - 0.1in);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0.75in;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.logo {
+    max-height: 5em;
+}
+
+.titlestack {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+}
+
+.orgname {
+    font-size: 36px;
+    font-family: "futura-pt", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+}
+
+.pagename {
+    font-size: larger;
+    margin: 0;
+    font-weight: normal;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: large;
+    margin: 1.5em 0;
+}
+
+.btn {
+    padding: 0.5em 1em;
+    border: 3px solid #444;
+    border-radius: 0.66em;
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: "futura-pt", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+table {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+}
+
+table.lines tr:not(:last-child) {
+    border-bottom: 1px dotted #444;
+}
+
+td {
+    padding: 3px 0;
+}
+
+table.alternate tr:nth-child(even) td {
+    background-color: #DDD;
+}
+
+.number {
+    font-family: "Source Code Pro", monospace;
+    /* text-align: right; */
+    color: black;
+    width: 40%;
+}
+
+.number a {
+    text-decoration: none;
+    color: black;
+}
+
+.footnote {
+    font-size: smaller;
+    margin-top: 1em;
+    color: #444;
+}
+
+/* --- Cover page --- */
+
+.page {
+    outline: 1px solid black;
+}
+
+.fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+.field {
+    display: flex;
+    width: 100%;
+}
+
+.field-name {
+    display: inline;
+    margin-right: 0.75em;
+}
+
+.field-area {
+    /* padding: 2px; */
+    border-bottom: 1px solid black;
+    width: 100%
+}
+
+.break {
+    width: 100%;
+    border-bottom: 2px dashed gray;
+    margin: 2em 0;
+}
+
+.message {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+}
+
+/* Flex column like .page, so child margins add up instead of collapsing
+   (matches the spacing from before the fields were wrapped in this div) */
+.header-fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.m_text {
+    margin-top: 0.75em;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.toolbar {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5em;
+    padding: 0.6em;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    font-family: "Open Sans", system-ui, sans-serif;
+    font-size: small;
+}
+
+/* Mode switch on the left, minimize button on the right */
+.toolbar-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5em;
+}
+
+.toolbar #toolbarToggle {
+    border: none;
+    background: none;
+    padding: 0 0.2em;
+    line-height: 1;
+}
+
+/* Minimized: only the toggle button is left, tucked into the corner */
+.toolbar.minimized {
+    padding: 0.4em;
+}
+
+.toolbar.minimized > :not(.toolbar-head),
+.toolbar.minimized .input-mode {
+    display: none !important;
+}
+
+.input-mode {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.drawing-toolbar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.4em;
+}
+
+.tools {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.3em;
+}
+
+.swatches {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.25em;
+}
+
+.text-toolbar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.3em;
+}
+
+.text-toolbar [data-cmd="removeFormat"] {
+    grid-column: 1 / -1;
+}
+
+.toolbar .quality-select {
+    font: inherit;
+    color: black; /* iOS Safari otherwise uses its blue system tint */
+}
+
+.text-toolbar .font-select {
+    grid-column: 1 / -1;
+    font: inherit;
+    color: black; /* iOS Safari otherwise uses its blue system tint */
+}
+
+.text-toolbar .toggle-fields {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    cursor: pointer;
+}
+
+.text-toolbar button.active {
+    background: #444;
+    color: white;
+}
+
+.drawing-toolbar .swatch {
+    width: 1.3em;
+    height: 1.3em;
+    padding: 0;
+    border: 1px solid #888;
+    border-radius: 50%;
+}
+
+.drawing-toolbar .swatch.active {
+    outline: 2px solid #444;
+    outline-offset: 2px;
+}
+
+.toolbar button {
+    font: inherit;
+    padding: 0.1em 0.5em;
+    border: 1px solid #444;
+    border-radius: 0.33em;
+    background: white;
+    color: black; /* iOS Safari otherwise uses its blue system tint */
+    cursor: pointer;
+}
+
+.drawing-toolbar button.active {
+    background: #444;
+    color: white;
+}
+
+.drawing-toolbar input[type="range"] {
+    width: 100%;
+    margin: 0;
+}
+
+.page {
+    position: relative;
+}
+
+#drawCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    touch-action: none;
+    pointer-events: none;
+    /* iOS: no text selection or press-and-hold menu while drawing */
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+/* Live line/rect/circle preview while dragging, on top of the drawing */
+#previewCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+body.drawing #drawCanvas {
+    pointer-events: auto;
+    cursor: crosshair;
+}
+
+/* Pen/eraser: the stroke preview replaces the system cursor */
+body.drawing.brush #drawCanvas {
+    cursor: none;
+}
+
+/* Dot under the cursor showing the pen's size and grey (or the eraser's size) */
+#brushPreview {
+    position: fixed;
+    z-index: 6;
+    pointer-events: none;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    /* Light + dark ring so it stays visible on any grey, even at 1px */
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 0 2px rgba(0, 0, 0, 0.45);
+}
+
+body:not(.drawing) #brushPreview {
+    display: none;
+}
+
+#brushPreview.eraser {
+    background: transparent !important;
+    box-shadow: none;
+    border: 1px dashed #444;
+}
+
+/* Copy of the page rendered for the saved image: like print, but without the drawing,
+   which is laid over it separately so the fax dots stay crisp */
+body.exporting .no-print,
+body.exporting #drawCanvas,
+body.exporting #printCanvas {
+    display: none !important;
+}
+
+body.exporting .page {
+    outline: none !important;
+}
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    * {
+        caret-color: transparent !important;
+    }
+
+    ::selection {
+        background: transparent !important;
+    }
+
+    .page {
+        outline: none !important;
+    }
+
+    #drawCanvas {
+        display: none !important;
+    }
+
+    #printCanvas {
+        display: block !important;
+    }
+}
+
+/* 1-bit dithered copy of the drawing at fax resolution, shown only when printing */
+#printCanvas {
+    display: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
